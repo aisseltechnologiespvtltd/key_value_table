@@ -179,22 +179,34 @@ KeyValueTable.items(
 
 ## Properties Reference
 
+### `KeyValueTable` Properties
+
 | Property | Type | Default | Description |
 |---|---|---|---|
 | `data` | `Map<String, dynamic>?` | `null` | Key-value pairs as a Map. |
 | `entries` | `Iterable<MapEntry<String, dynamic>>?` | `null` | Explicitly ordered key-value pairs. |
 | `items` | `List<KeyValueItem>?` | `null` | Granular list of items with per-row customizations. |
 | `separator` | `String?` | `null` | Separator text (e.g. `':'`, `'->'`). Defaults to `null` (no colon). |
-| `separatorWidget` | `Widget?` | `null` | Custom widget to use as separator. |
+| `separatorWidget` | `Widget?` | `null` | Custom widget to use as separator (overrides `separator`). |
 | `separatorWidth` | `double` | `16.0` | Width of the separator column in 3-column mode. |
 | `horizontalGap` | `double` | `16.0` | Gap between key and value in 2-column mode (when separator is null). |
 | `keyAlignment` | `AlignmentGeometry` | `Alignment.centerLeft` | Alignment for key cells. |
 | `valueAlignment` | `AlignmentGeometry` | `Alignment.centerLeft` | Alignment for value cells. |
 | `keyTextAlign` | `TextAlign?` | `null` | Text alignment for key labels. |
 | `valueTextAlign` | `TextAlign?` | `null` | Text alignment for value text. |
+| `keyColumnWidth` | `TableColumnWidth?` | `IntrinsicColumnWidth()` | Column sizing specification for the key column. |
+| `valueColumnWidth` | `TableColumnWidth?` | `FlexColumnWidth()` | Column sizing specification for the value column. |
+| `maxKeyWidth` | `double?` | `null` | Maximum width constraint for key column before wrapping. |
+| `valueBuilder` | `KeyValueWidgetBuilder?` | `null` | Custom builder for rendering value widgets dynamically by key. |
+| `keyStyle` | `TextStyle?` | `FontWeight.w600` | Text style for key labels. |
+| `valueStyle` | `TextStyle?` | `null` | Text style for values (defaults to `bodyMedium`). |
+| `separatorStyle` | `TextStyle?` | `null` | Text style for separator string (defaults to `keyStyle`). |
 | `layout` | `KeyValueLayout` | `KeyValueLayout.horizontal` | Layout mode: `horizontal`, `stacked`, or `auto`. |
 | `breakpoint` | `double` | `480.0` | Breakpoint width for `KeyValueLayout.auto`. |
 | `density` | `KeyValueDensity` | `KeyValueDensity.regular` | Spacing preset: `compact` (2px), `regular` (6px), `comfortable` (12px). |
+| `rowPadding` | `EdgeInsetsGeometry?` | `null` | Padding applied around row cells (overrides `density`). |
+| `verticalAlignment` | `TableCellVerticalAlignment` | `TableCellVerticalAlignment.middle` | Vertical alignment of cells within a row. |
+| `border` | `TableBorder?` | `null` | Optional border decoration for the table. |
 | `showDividers` | `bool` | `false` | Whether to draw horizontal dividers between rows. |
 | `dividerColor` | `Color?` | `null` | Custom color for row dividers. |
 | `dividerThickness` | `double` | `1.0` | Thickness of row dividers. |
@@ -207,6 +219,23 @@ KeyValueTable.items(
 | `alternateRowColor` | `Color?` | `null` | Background color for odd rows (zebra striping). |
 | `onRowTap` | `KeyValueRowCallback?` | `null` | Callback when a row is tapped. |
 | `onRowLongPress` | `KeyValueRowCallback?` | `null` | Callback when a row is long-pressed. |
+
+### `KeyValueItem` Properties
+
+| Property | Type | Default | Description |
+|---|---|---|---|
+| `key` | `String` | *(required)* | The key label text. |
+| `value` | `dynamic` | *(required)* | Value to display (`String`, number, boolean, or any `Widget`). |
+| `leading` | `Widget?` | `null` | Optional widget displayed before the key label (e.g. icon). |
+| `trailing` | `Widget?` | `null` | Optional widget displayed after the value (e.g. status badge). |
+| `tooltip` | `String?` | `null` | Explanatory tooltip message shown with an info icon next to key. |
+| `keyStyle` | `TextStyle?` | `null` | Row-level custom text style for key label. |
+| `valueStyle` | `TextStyle?` | `null` | Row-level custom text style for value. |
+| `keyAlignment` | `AlignmentGeometry?` | `null` | Row-level alignment for key cell. |
+| `valueAlignment` | `AlignmentGeometry?` | `null` | Row-level alignment for value cell. |
+| `onTap` | `KeyValueRowCallback?` | `null` | Callback when this specific row is tapped. |
+| `onLongPress` | `KeyValueRowCallback?` | `null` | Callback when this specific row is long-pressed. |
+| `copyable` | `bool?` | `null` | Whether this specific row allows tap-to-copy. |
 
 ---
 
