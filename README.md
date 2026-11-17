@@ -6,6 +6,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![GitHub stars](https://img.shields.io/github/stars/Amrit1345/key_value_table.svg?style=flat&logo=github)](https://github.com/Amrit1345/key_value_table/stargazers)
 
+**"Format. Customize. Display. Your way."**
+
 A modern, highly customizable Flutter table widget for **clean, perfectly aligned key-value pairs**. Designed to follow modern UI design standards (Material 3, Apple HIG, Stripe, Shopify Polaris) with automatic 2-column clean whitespace, optional separators, configurable key/value alignments, responsive stacked layouts, and granular item-level controls.
 
 ### Desktop & Web Showcase
