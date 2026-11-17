@@ -15,7 +15,7 @@ We release patches and security fixes for the latest active release versions of 
 
 If you discover a security vulnerability within `key_value_table`, please do **NOT** disclose it publicly via a GitHub issue.
 
-Instead, please send an email to [amrit2024aissel@gmail.com](mailto:amrit2024aissel@gmail.com) with the following details:
+Instead, please send an email to [aisseltechnologiespvtltd@gmail.com](mailto:aisseltechnologiespvtltd@gmail.com) with the following details:
 - Type of vulnerability and affected component.
 - Step-by-step instructions to reproduce the issue.
 - Potential impact and possible remediation (if known).

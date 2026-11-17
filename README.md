@@ -2,28 +2,28 @@
 
 [![Pub Version](https://img.shields.io/pub/v/key_value_table.svg)](https://pub.dev/packages/key_value_table)
 [![Pub Points](https://img.shields.io/pub/points/key_value_table)](https://pub.dev/packages/key_value_table/score)
-[![CI](https://github.com/Amrit1345/key_value_table/actions/workflows/ci.yml/badge.svg)](https://github.com/Amrit1345/key_value_table/actions/workflows/ci.yml)
+[![CI](https://github.com/aisseltechnologiespvtltd/key_value_table/actions/workflows/ci.yml/badge.svg)](https://github.com/aisseltechnologiespvtltd/key_value_table/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![GitHub stars](https://img.shields.io/github/stars/Amrit1345/key_value_table.svg?style=flat&logo=github)](https://github.com/Amrit1345/key_value_table/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/aisseltechnologiespvtltd/key_value_table.svg?style=flat&logo=github)](https://github.com/aisseltechnologiespvtltd/key_value_table/stargazers)
 
 A modern, highly customizable Flutter table widget for **clean, perfectly aligned key-value pairs**. Designed to follow modern UI design standards (Material 3, Apple HIG, Stripe, Shopify Polaris) with automatic 2-column clean whitespace, optional separators, configurable key/value alignments, responsive stacked layouts, and granular item-level controls.
 
 ### Desktop & Web Showcase
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Amrit1345/key_value_table/main/doc/screenshots/demo_dark.png" alt="KeyValueTable in Dark Mode (Desktop)" width="720"/>
+  <img src="https://raw.githubusercontent.com/aisseltechnologiespvtltd/key_value_table/main/doc/screenshots/demo_dark.png" alt="KeyValueTable in Dark Mode (Desktop)" width="720"/>
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Amrit1345/key_value_table/main/doc/screenshots/demo_light.png" alt="KeyValueTable in Light Mode (Desktop)" width="720"/>
+  <img src="https://raw.githubusercontent.com/aisseltechnologiespvtltd/key_value_table/main/doc/screenshots/demo_light.png" alt="KeyValueTable in Light Mode (Desktop)" width="720"/>
 </p>
 
 ### Mobile Responsive Showcase
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Amrit1345/key_value_table/main/doc/screenshots/demo_dark_mobile.gif" alt="KeyValueTable in Dark Mode (Mobile Scroll)" width="350"/>
+  <img src="https://raw.githubusercontent.com/aisseltechnologiespvtltd/key_value_table/main/doc/screenshots/demo_dark_mobile.gif" alt="KeyValueTable in Dark Mode (Mobile Scroll)" width="350"/>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://raw.githubusercontent.com/Amrit1345/key_value_table/main/doc/screenshots/demo_light_mobile.gif" alt="KeyValueTable in Light Mode (Mobile Scroll)" width="350"/>
+  <img src="https://raw.githubusercontent.com/aisseltechnologiespvtltd/key_value_table/main/doc/screenshots/demo_light_mobile.gif" alt="KeyValueTable in Light Mode (Mobile Scroll)" width="350"/>
 </p>
 
 ---
@@ -247,7 +247,7 @@ To run it locally:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/Amrit1345/key_value_table.git
+git clone https://github.com/aisseltechnologiespvtltd/key_value_table.git
 
 # 2. Navigate to the example project
 cd key_value_table/example
@@ -274,7 +274,7 @@ Contributions are always welcome! Whether you are fixing bugs, improving documen
 
 1. Read our [Contributing Guide](CONTRIBUTING.md) to get started.
 2. Review our [Code of Conduct](CODE_OF_CONDUCT.md).
-3. Check out the [Issue Tracker](https://github.com/Amrit1345/key_value_table/issues) to report bugs or request features.
+3. Check out the [Issue Tracker](https://github.com/aisseltechnologiespvtltd/key_value_table/issues) to report bugs or request features.
 4. Submit a Pull Request following our [PR Template](.github/PULL_REQUEST_TEMPLATE.md).
 
 ---
@@ -287,7 +287,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Additional Information
 
-- **Package Repository:** [github.com/Amrit1345/key_value_table](https://github.com/Amrit1345/key_value_table)
-- **Example Showcase:** [github.com/Amrit1345/key_value_table/tree/main/example](https://github.com/Amrit1345/key_value_table/tree/main/example)
-- **Issue Tracker:** [github.com/Amrit1345/key_value_table/issues](https://github.com/Amrit1345/key_value_table/issues)
+- **Package Repository:** [github.com/aisseltechnologiespvtltd/key_value_table](https://github.com/aisseltechnologiespvtltd/key_value_table)
+- **Example Showcase:** [github.com/aisseltechnologiespvtltd/key_value_table/tree/main/example](https://github.com/aisseltechnologiespvtltd/key_value_table/tree/main/example)
+- **Issue Tracker:** [github.com/aisseltechnologiespvtltd/key_value_table/issues](https://github.com/aisseltechnologiespvtltd/key_value_table/issues)
 
