@@ -2,9 +2,9 @@
 
 [![Pub Version](https://img.shields.io/pub/v/key_value_table.svg)](https://pub.dev/packages/key_value_table)
 [![Pub Points](https://img.shields.io/pub/points/key_value_table)](https://pub.dev/packages/key_value_table/score)
-[![CI](https://github.com/Amrit1345/key_value_table/actions/workflows/ci.yml/badge.svg)](https://github.com/Amrit1345/key_value_table/actions/workflows/ci.yml)
+[![CI](https://github.com/aisseltechnologiespvtltd/key_value_table/actions/workflows/ci.yml/badge.svg)](https://github.com/aisseltechnologiespvtltd/key_value_table/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![GitHub stars](https://img.shields.io/github/stars/Amrit1345/key_value_table.svg?style=flat&logo=github)](https://github.com/Amrit1345/key_value_table/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/aisseltechnologiespvtltd/key_value_table.svg?style=flat&logo=github)](https://github.com/aisseltechnologiespvtltd/key_value_table/stargazers)
 
 **"Format. Customize. Display. Your way."**
 
@@ -13,19 +13,19 @@ A modern, highly customizable Flutter table widget for **clean, perfectly aligne
 ### Desktop & Web Showcase
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Amrit1345/key_value_table/main/doc/screenshots/demo_dark.png" alt="KeyValueTable in Dark Mode (Desktop)" width="720"/>
+  <img src="https://raw.githubusercontent.com/aisseltechnologiespvtltd/key_value_table/main/doc/screenshots/demo_dark.png" alt="KeyValueTable in Dark Mode (Desktop)" width="720"/>
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Amrit1345/key_value_table/main/doc/screenshots/demo_light.png" alt="KeyValueTable in Light Mode (Desktop)" width="720"/>
+  <img src="https://raw.githubusercontent.com/aisseltechnologiespvtltd/key_value_table/main/doc/screenshots/demo_light.png" alt="KeyValueTable in Light Mode (Desktop)" width="720"/>
 </p>
 
 ### Mobile Responsive Showcase
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Amrit1345/key_value_table/main/doc/screenshots/demo_dark_mobile.gif" alt="KeyValueTable in Dark Mode (Mobile Scroll)" width="350"/>
+  <img src="https://raw.githubusercontent.com/aisseltechnologiespvtltd/key_value_table/main/doc/screenshots/demo_dark_mobile.gif" alt="KeyValueTable in Dark Mode (Mobile Scroll)" width="350"/>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://raw.githubusercontent.com/Amrit1345/key_value_table/main/doc/screenshots/demo_light_mobile.gif" alt="KeyValueTable in Light Mode (Mobile Scroll)" width="350"/>
+  <img src="https://raw.githubusercontent.com/aisseltechnologiespvtltd/key_value_table/main/doc/screenshots/demo_light_mobile.gif" alt="KeyValueTable in Light Mode (Mobile Scroll)" width="350"/>
 </p>
 
 ---
@@ -181,22 +181,34 @@ KeyValueTable.items(
 
 ## Properties Reference
 
+### `KeyValueTable` Properties
+
 | Property | Type | Default | Description |
 |---|---|---|---|
 | `data` | `Map<String, dynamic>?` | `null` | Key-value pairs as a Map. |
 | `entries` | `Iterable<MapEntry<String, dynamic>>?` | `null` | Explicitly ordered key-value pairs. |
 | `items` | `List<KeyValueItem>?` | `null` | Granular list of items with per-row customizations. |
 | `separator` | `String?` | `null` | Separator text (e.g. `':'`, `'->'`). Defaults to `null` (no colon). |
-| `separatorWidget` | `Widget?` | `null` | Custom widget to use as separator. |
+| `separatorWidget` | `Widget?` | `null` | Custom widget to use as separator (overrides `separator`). |
 | `separatorWidth` | `double` | `16.0` | Width of the separator column in 3-column mode. |
 | `horizontalGap` | `double` | `16.0` | Gap between key and value in 2-column mode (when separator is null). |
 | `keyAlignment` | `AlignmentGeometry` | `Alignment.centerLeft` | Alignment for key cells. |
 | `valueAlignment` | `AlignmentGeometry` | `Alignment.centerLeft` | Alignment for value cells. |
 | `keyTextAlign` | `TextAlign?` | `null` | Text alignment for key labels. |
 | `valueTextAlign` | `TextAlign?` | `null` | Text alignment for value text. |
+| `keyColumnWidth` | `TableColumnWidth?` | `IntrinsicColumnWidth()` | Column sizing specification for the key column. |
+| `valueColumnWidth` | `TableColumnWidth?` | `FlexColumnWidth()` | Column sizing specification for the value column. |
+| `maxKeyWidth` | `double?` | `null` | Maximum width constraint for key column before wrapping. |
+| `valueBuilder` | `KeyValueWidgetBuilder?` | `null` | Custom builder for rendering value widgets dynamically by key. |
+| `keyStyle` | `TextStyle?` | `FontWeight.w600` | Text style for key labels. |
+| `valueStyle` | `TextStyle?` | `null` | Text style for values (defaults to `bodyMedium`). |
+| `separatorStyle` | `TextStyle?` | `null` | Text style for separator string (defaults to `keyStyle`). |
 | `layout` | `KeyValueLayout` | `KeyValueLayout.horizontal` | Layout mode: `horizontal`, `stacked`, or `auto`. |
 | `breakpoint` | `double` | `480.0` | Breakpoint width for `KeyValueLayout.auto`. |
 | `density` | `KeyValueDensity` | `KeyValueDensity.regular` | Spacing preset: `compact` (2px), `regular` (6px), `comfortable` (12px). |
+| `rowPadding` | `EdgeInsetsGeometry?` | `null` | Padding applied around row cells (overrides `density`). |
+| `verticalAlignment` | `TableCellVerticalAlignment` | `TableCellVerticalAlignment.middle` | Vertical alignment of cells within a row. |
+| `border` | `TableBorder?` | `null` | Optional border decoration for the table. |
 | `showDividers` | `bool` | `false` | Whether to draw horizontal dividers between rows. |
 | `dividerColor` | `Color?` | `null` | Custom color for row dividers. |
 | `dividerThickness` | `double` | `1.0` | Thickness of row dividers. |
@@ -210,6 +222,23 @@ KeyValueTable.items(
 | `onRowTap` | `KeyValueRowCallback?` | `null` | Callback when a row is tapped. |
 | `onRowLongPress` | `KeyValueRowCallback?` | `null` | Callback when a row is long-pressed. |
 
+### `KeyValueItem` Properties
+
+| Property | Type | Default | Description |
+|---|---|---|---|
+| `key` | `String` | *(required)* | The key label text. |
+| `value` | `dynamic` | *(required)* | Value to display (`String`, number, boolean, or any `Widget`). |
+| `leading` | `Widget?` | `null` | Optional widget displayed before the key label (e.g. icon). |
+| `trailing` | `Widget?` | `null` | Optional widget displayed after the value (e.g. status badge). |
+| `tooltip` | `String?` | `null` | Explanatory tooltip message shown with an info icon next to key. |
+| `keyStyle` | `TextStyle?` | `null` | Row-level custom text style for key label. |
+| `valueStyle` | `TextStyle?` | `null` | Row-level custom text style for value. |
+| `keyAlignment` | `AlignmentGeometry?` | `null` | Row-level alignment for key cell. |
+| `valueAlignment` | `AlignmentGeometry?` | `null` | Row-level alignment for value cell. |
+| `onTap` | `KeyValueRowCallback?` | `null` | Callback when this specific row is tapped. |
+| `onLongPress` | `KeyValueRowCallback?` | `null` | Callback when this specific row is long-pressed. |
+| `copyable` | `bool?` | `null` | Whether this specific row allows tap-to-copy. |
+
 ---
 
 ## Running the Example Showcase App
@@ -220,7 +249,7 @@ To run it locally:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/Amrit1345/key_value_table.git
+git clone https://github.com/aisseltechnologiespvtltd/key_value_table.git
 
 # 2. Navigate to the example project
 cd key_value_table/example
@@ -247,7 +276,7 @@ Contributions are always welcome! Whether you are fixing bugs, improving documen
 
 1. Read our [Contributing Guide](CONTRIBUTING.md) to get started.
 2. Review our [Code of Conduct](CODE_OF_CONDUCT.md).
-3. Check out the [Issue Tracker](https://github.com/Amrit1345/key_value_table/issues) to report bugs or request features.
+3. Check out the [Issue Tracker](https://github.com/aisseltechnologiespvtltd/key_value_table/issues) to report bugs or request features.
 4. Submit a Pull Request following our [PR Template](.github/PULL_REQUEST_TEMPLATE.md).
 
 ---
@@ -260,7 +289,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Additional Information
 
-- **Package Repository:** [github.com/Amrit1345/key_value_table](https://github.com/Amrit1345/key_value_table)
-- **Example Showcase:** [github.com/Amrit1345/key_value_table/tree/main/example](https://github.com/Amrit1345/key_value_table/tree/main/example)
-- **Issue Tracker:** [github.com/Amrit1345/key_value_table/issues](https://github.com/Amrit1345/key_value_table/issues)
+- **Package Repository:** [github.com/aisseltechnologiespvtltd/key_value_table](https://github.com/aisseltechnologiespvtltd/key_value_table)
+- **Example Showcase:** [github.com/aisseltechnologiespvtltd/key_value_table/tree/main/example](https://github.com/aisseltechnologiespvtltd/key_value_table/tree/main/example)
+- **Issue Tracker:** [github.com/aisseltechnologiespvtltd/key_value_table/issues](https://github.com/aisseltechnologiespvtltd/key_value_table/issues)
 

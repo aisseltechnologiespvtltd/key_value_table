@@ -15,7 +15,7 @@ By participating in this project, you agree to abide by the terms of our [Code o
 ## How Can I Contribute?
 
 ### 1. Reporting Bugs
-- **Check existing issues:** Before opening a new issue, please search the [Issue Tracker](https://github.com/Amrit1345/key_value_table/issues) to verify that the bug hasn't already been reported.
+- **Check existing issues:** Before opening a new issue, please search the [Issue Tracker](https://github.com/aisseltechnologiespvtltd/key_value_table/issues) to verify that the bug hasn't already been reported.
 - **Provide reproduction details:**
   - Clear summary and steps to reproduce.
   - Expected vs. actual behavior.
